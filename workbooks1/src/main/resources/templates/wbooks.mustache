@@ -1,0 +1,22 @@
+
+<html>
+<body>
+  <div>
+     <form action="/logout" method="post">
+         <input type="submit" value="Sign Out"/>
+         <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+     </form>
+  </div>
+  <div>Список конспектов</div>
+    {{#workbooks}}
+     <div>
+         <b>{{id}}</b>
+         <b>{{name}}</b>
+         <b>{{description}}</b>
+         <strong>{{author}}</strong>
+     </div>
+    {{/workbooks}}
+
+  <a href="/createWB">Добавить конспект</a>
+</body>
+</html>
